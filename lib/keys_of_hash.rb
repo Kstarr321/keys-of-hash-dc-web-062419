@@ -1,9 +1,12 @@
 class Hash
-  def keys_of(arguments)
+  def keys_of(*arguments)
     arr = []
-    :animals.each do |key, value|
-      if value == arguments
-      arr << key 
+    self.each do |key, value|
+      arguments.each do |elmt|
+        if elmt == value 
+        
+          arr << key 
+        end
       end
     end
     arr
